@@ -8,11 +8,13 @@ This portfolio is a personal showcase of my learning journey, technical interest
 
 Open the live portfolio here:
 
-<a href="https://syedyaserali45.github.io/portfolio-website/" target="_blank" rel="noopener noreferrer">https://syedyaserali45.github.io/portfolio-website/</a>
+[Live portfolio](https://syedyaserali45.github.io/portfolio-website/)
 
 GitHub repository:
 
-<a href="https://github.com/syedyaserali45/portfolio-website" target="_blank" rel="noopener noreferrer">https://github.com/syedyaserali45/portfolio-website</a>
+[GitHub repo](https://github.com/syedyaserali45/portfolio-website)
+
+> Note: GitHub strips the `target="_blank"` attribute in README files, so use Ctrl/Cmd + click to open links in a new tab.
 
 ## ✨ What this portfolio includes
 
