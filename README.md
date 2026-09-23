@@ -12,9 +12,6 @@ Portfolio URL (copyable):
 https://syedyaserali45.github.io/portfolio-website/
 ```
 
-Quick link: [Live portfolio](https://syedyaserali45.github.io/portfolio-website/)
-
-GitHub repository: [GitHub repo](https://github.com/syedyaserali45/portfolio-website)
 
 > Tip: you can copy the URL above directly or use Ctrl/Cmd + click on the link to open it in a new tab.
 
