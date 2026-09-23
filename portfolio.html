@@ -259,12 +259,12 @@
     /* Cinematic layer */
     .intro-sequence { position: fixed; z-index: 120; inset: 0; display: grid; place-items: center; align-content: center; gap: 12px; color: var(--ink); background: var(--bg); transition: opacity .8s cubic-bezier(.2,.75,.2,1), visibility .8s ease, transform .8s cubic-bezier(.2,.75,.2,1); }
     .intro-sequence.is-gone { opacity: 0; visibility: hidden; transform: scale(1.05); pointer-events: none; }
-    .intro-mark { color: var(--accent); font-size: clamp(5rem, 16vw, 12rem); font-weight: 950; letter-spacing: -.14em; line-height: .8; text-shadow: 0 0 28px color-mix(in srgb, var(--accent) 42%, transparent); animation: introMarkIn 1s cubic-bezier(.2,.75,.2,1) both, logoBlink 2.35s 1.05s ease-in-out infinite; }
+    .intro-mark { color: var(--accent); font-size: clamp(5rem, 16vw, 12rem); font-weight: 950; letter-spacing: -.14em; line-height: .8; text-shadow: 0 0 24px color-mix(in srgb, var(--accent) 42%, transparent); animation: introMarkIn 1s cubic-bezier(.2,.75,.2,1) both, syaBlink 2.4s 1.1s ease-in-out infinite; }
     .intro-caption { color: var(--muted); font: 700 .65rem/1.2 monospace; letter-spacing: .22em; text-transform: uppercase; animation: introCaptionIn .9s .22s both; }
     .intro-scroll { position: absolute; left: 50%; bottom: 13%; width: 1px; height: 78px; overflow: hidden; background: var(--line-strong); }
     .intro-scroll span { display: block; width: 100%; height: 30px; background: linear-gradient(var(--accent), var(--cyan)); box-shadow: 0 0 15px var(--accent); animation: introScrollDrop 1.2s .35s ease-in-out infinite; }
     body.is-intro { overflow: hidden; }
-    @keyframes logoBlink { 0%, 100% { opacity: 1; filter: brightness(1); box-shadow: 0 0 0 5px color-mix(in srgb, var(--accent) 14%, transparent), 0 0 22px color-mix(in srgb, var(--accent) 32%, transparent); } 46% { opacity: .74; filter: brightness(.9); box-shadow: 0 0 0 5px color-mix(in srgb, var(--accent) 7%, transparent), 0 0 8px color-mix(in srgb, var(--accent) 14%, transparent); } 52% { opacity: 1; filter: brightness(1.2); box-shadow: 0 0 0 5px color-mix(in srgb, var(--accent) 24%, transparent), 0 0 34px color-mix(in srgb, var(--accent) 55%, transparent); } }
+    @keyframes syaBlink { 0%, 100% { opacity: 1; filter: brightness(1); text-shadow: 0 0 12px color-mix(in srgb, var(--accent) 28%, transparent), 0 0 24px color-mix(in srgb, var(--accent) 38%, transparent); } 46% { opacity: .82; filter: brightness(.9); text-shadow: 0 0 6px color-mix(in srgb, var(--accent) 20%, transparent), 0 0 14px color-mix(in srgb, var(--accent) 24%, transparent); } 52% { opacity: 1; filter: brightness(1.2); text-shadow: 0 0 18px color-mix(in srgb, var(--accent) 48%, transparent), 0 0 32px color-mix(in srgb, var(--accent) 58%, transparent); } }
     @keyframes introMarkIn { from { opacity: 0; transform: translateY(22px) scale(.7); letter-spacing: -.28em; filter: blur(10px); } to { opacity: 1; transform: translateY(0) scale(1); letter-spacing: -.1em; filter: blur(0); } }
     @keyframes introCaptionIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes introScrollDrop { from { transform: translateY(-34px); } to { transform: translateY(82px); } }
@@ -498,11 +498,10 @@
       <div class="nav-links" id="navLinks">
         <a href="#about">About</a>
         <a href="#capabilities">Capabilities</a>
-        <a href="#education">Education</a>
         <a href="#work">Work</a>
         <a href="#journey">Journey</a>
+        <a href="#education">Education</a>
         <a href="#freelancer">Freelancer</a>
-        <a href="#playground">Playground</a>
         <a href="#contact">Contact</a>
       </div>
       <div class="header-actions">
@@ -739,7 +738,7 @@
     <section class="section skills-section" id="education">
       <div class="wrap">
         <div class="section-heading reveal">
-          <div class="eyebrow">Academic foundation / 01</div>
+          <div class="eyebrow">Academic foundation</div>
           <p class="quote-line">“One strong foundation can open many directions.”<cite>Education / Computer Science</cite></p>
           <h2>One education story, with room to grow.</h2>
           <p class="lead">A detailed view of the academic foundation behind the portfolio.</p>
@@ -821,7 +820,7 @@
     <section class="section" id="contact">
       <div class="wrap">
         <div class="contact-panel reveal">
-          <div class="eyebrow">09 / Let’s connect</div>
+          <div class="eyebrow">08 / Let’s connect</div>
           <h2>Have a problem worth structuring?</h2>
           <p>I’m open to conversations around data analytics, MIS reporting, entry-level data roles, operations, business analysis, and technology projects where curiosity can become useful output.</p>
           <div class="contact-details">
@@ -846,7 +845,7 @@
     const savedTheme = localStorage.getItem('yasir-theme');
     if (savedTheme) root.setAttribute('data-theme', savedTheme);
     const introSequence = document.getElementById('introSequence');
-    window.setTimeout(() => { introSequence.classList.add('is-gone'); document.body.classList.remove('is-intro'); }, window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 80 : 1450);
+    window.setTimeout(() => { introSequence.classList.add('is-gone'); document.body.classList.remove('is-intro'); }, window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 80 : 2600);
     themeToggle.addEventListener('click', () => {
       const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
       if (next === 'dark') root.removeAttribute('data-theme'); else root.setAttribute('data-theme', next);
