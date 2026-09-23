@@ -6,15 +6,17 @@ This portfolio is a personal showcase of my learning journey, technical interest
 
 ## 🚀 Live Website
 
-Open the live portfolio here:
+Portfolio URL (copyable):
 
-[Live portfolio](https://syedyaserali45.github.io/portfolio-website/)
+```text
+https://syedyaserali45.github.io/portfolio-website/
+```
 
-GitHub repository:
+Quick link: [Live portfolio](https://syedyaserali45.github.io/portfolio-website/)
 
-[GitHub repo](https://github.com/syedyaserali45/portfolio-website)
+GitHub repository: [GitHub repo](https://github.com/syedyaserali45/portfolio-website)
 
-> Note: GitHub strips the `target="_blank"` attribute in README files, so use Ctrl/Cmd + click to open links in a new tab.
+> Tip: you can copy the URL above directly or use Ctrl/Cmd + click on the link to open it in a new tab.
 
 ## ✨ What this portfolio includes
 
