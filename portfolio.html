@@ -98,10 +98,9 @@
     .nav { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
     .brand { display: inline-flex; align-items: center; gap: 11px; font-weight: 800; letter-spacing: -.02em; }
     .brand-mark {
-      width: 50px; height: 42px; display: grid; place-items: center; border-radius: 12px;
-      background: var(--accent); color: #10160c; font-size: .92rem; font-weight: 950; letter-spacing: -.08em;
-      box-shadow: 0 0 0 5px color-mix(in srgb, var(--accent) 14%, transparent), 0 0 22px color-mix(in srgb, var(--accent) 32%, transparent);
-      animation: logoBlink 2.5s ease-in-out infinite;
+      width: auto; height: auto; display: inline-flex; align-items: center; justify-content: center;
+      border-radius: 0; background: transparent; color: var(--accent); font-size: .92rem; font-weight: 950;
+      letter-spacing: -.08em; box-shadow: none; animation: none;
     }
     .nav-links { display: flex; align-items: center; gap: 23px; color: var(--muted); font-size: .9rem; }
     .nav-links a { transition: color .2s ease; }
