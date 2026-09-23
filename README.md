@@ -6,11 +6,11 @@ A modern personal portfolio website showcasing data analytics, MIS reporting, AI
 
 Visit the live portfolio here:
 
-https://syedyaserali45.github.io/portfolio-website/
+<a href="https://syedyaserali45.github.io/portfolio-website/" target="_blank" rel="noopener noreferrer">https://syedyaserali45.github.io/portfolio-website/</a>
 
 GitHub repository:
 
-https://github.com/syedyaserali45/portfolio-website
+<a href="https://github.com/syedyaserali45/portfolio-website" target="_blank" rel="noopener noreferrer">https://github.com/syedyaserali45/portfolio-website</a>
 
 ## ✨ Overview
 
