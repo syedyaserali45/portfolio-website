@@ -13,7 +13,6 @@ https://syedyaserali45.github.io/portfolio-website/
 ```
 
 
-> Tip: you can copy the URL above directly or use Ctrl/Cmd + click on the link to open it in a new tab.
 
 ## ✨ What this portfolio includes
 
