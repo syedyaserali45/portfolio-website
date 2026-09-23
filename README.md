@@ -1,10 +1,12 @@
 # 🌐 Syed Yasir Ali Portfolio
 
-A modern personal portfolio website showcasing data analytics, MIS reporting, AI awareness, business thinking, frontend work, and product-oriented problem solving.
+Hi, I’m Syed Yasir Ali — a Computer Science graduate exploring the intersection of data, systems, AI awareness, problem solving, and product thinking.
+
+This portfolio is a personal showcase of my learning journey, technical interests, project work, and professional direction.
 
 ## 🚀 Live Website
 
-Visit the live portfolio here:
+Open the live portfolio here:
 
 <a href="https://syedyaserali45.github.io/portfolio-website/" target="_blank" rel="noopener noreferrer">https://syedyaserali45.github.io/portfolio-website/</a>
 
@@ -12,29 +14,27 @@ GitHub repository:
 
 <a href="https://github.com/syedyaserali45/portfolio-website" target="_blank" rel="noopener noreferrer">https://github.com/syedyaserali45/portfolio-website</a>
 
-## ✨ Overview
+## ✨ What this portfolio includes
 
-This project presents a polished single-page portfolio built with HTML, CSS, and a lightweight Python HTTP server. It highlights:
-
-- 🧠 Strong foundation in computer science and technology
-- 📊 Data analytics, MIS reporting, and dashboard thinking
-- 🤖 AI awareness and applied problem-solving interest
-- 💡 Product, business, and customer-focused problem framing
-- 🖥️ Frontend and interface design exploration
-- 📄 Downloadable resume and CV assets
+- 📊 Data analytics and MIS-focused thinking
+- 🤖 AI exposure and practical curiosity
+- 💡 Business and product-oriented problem framing
+- 🧠 Computer science foundation and self-directed learning
+- 🖥️ Frontend design and web presentation work
+- 📄 Resume and CV download access
 
 ## 🏗️ Project Structure
 
 ```text
 .
-├── app.py                  # Local Python server for previewing the portfolio
+├── app.py                  # Local Python server to preview the portfolio
 ├── index.html              # Redirect page for GitHub Pages
-├── portfolio.html          # Main portfolio page
+├── portfolio.html          # Main portfolio page and styling
 ├── cv_extract.txt          # Supporting CV/reference text
-├── assets/                 # Screenshot and visual assets
+├── assets/                 # Visuals, screenshots, and project images
 ├── uploads/                # Resume and CV PDFs
 ├── README.md               # Project documentation
-└── .gitignore              # Git ignore file (if present)
+└── .gitignore              # Git ignore file
 ```
 
 ## ▶️ Run Locally
@@ -46,7 +46,7 @@ This project presents a polished single-page portfolio built with HTML, CSS, and
 python app.py
 ```
 
-3. Open this URL in your browser:
+3. Visit:
 
 ```text
 http://localhost:8000/portfolio.html
@@ -54,19 +54,20 @@ http://localhost:8000/portfolio.html
 
 ## 📁 Key Files
 
-- `portfolio.html` — main portfolio design, structure, and styling
-- `app.py` — local server that serves the portfolio
-- `index.html` — redirect page for GitHub Pages deployment
-- `assets/` — project visuals and portfolio images
-- `uploads/` — CV and resume files
+- `portfolio.html` — main portfolio page layout, content, and styling
+- `app.py` — lightweight local server for previewing the website
+- `index.html` — redirect entry for GitHub Pages
+- `assets/` — portfolio visuals and project screenshots
+- `uploads/` — resume and CV documents
 
-## 📝 Notes
+## 📝 Purpose
 
-This repository is intended for personal portfolio use and showcases professional interests, learning, projects, and career direction in a modern digital format.
+This repository is meant to present my work, learning path, interests, and professional journey in a clean and modern format for recruiters, collaborators, and visitors.
 
 ## 🌟 Highlights
 
-- Responsive layout for desktop and mobile browsing
-- Modern visual design with subtle motion and effects
-- Portfolio sections covering work, education, journey, skills, and contact
-- Public deployment using GitHub Pages for easy hosting
+- Responsive portfolio layout
+- Modern dark-themed interface with subtle motion effects
+- Sections for work, journey, education, skills, and contact
+- Public hosting with GitHub Pages
+- Simple local development setup
