@@ -1,30 +1,43 @@
-# Syed Yasir Ali Portfolio
+# 🌐 Syed Yasir Ali Portfolio
 
-A personal portfolio website showcasing data analytics, business intelligence, AI awareness, product thinking, and frontend development work.
+A modern personal portfolio website showcasing data analytics, MIS reporting, AI awareness, business thinking, frontend work, and product-oriented problem solving.
 
-## Overview
+## 🚀 Live Website
 
-This project presents a modern single-page portfolio built with HTML, CSS, and a lightweight Python HTTP server. It includes:
+Visit the live portfolio here:
 
-- A professional personal profile and background
-- Skills and expertise across data, analytics, and digital products
-- Project highlights and case studies
-- Downloadable CV and resume assets
-- Responsive design for desktop and mobile browsing
+https://syedyaserali45.github.io/portfolio-website/
 
-## Project Structure
+GitHub repository:
+
+https://github.com/syedyaserali45/portfolio-website
+
+## ✨ Overview
+
+This project presents a polished single-page portfolio built with HTML, CSS, and a lightweight Python HTTP server. It highlights:
+
+- 🧠 Strong foundation in computer science and technology
+- 📊 Data analytics, MIS reporting, and dashboard thinking
+- 🤖 AI awareness and applied problem-solving interest
+- 💡 Product, business, and customer-focused problem framing
+- 🖥️ Frontend and interface design exploration
+- 📄 Downloadable resume and CV assets
+
+## 🏗️ Project Structure
 
 ```text
 .
-├── app.py                  # Simple Python server to serve the portfolio
+├── app.py                  # Local Python server for previewing the portfolio
+├── index.html              # Redirect page for GitHub Pages
 ├── portfolio.html          # Main portfolio page
-├── cv_extract.txt          # Supporting text used for CV extraction or reference
-├── assets/                 # Portfolio visual assets and project screenshots
-├── uploads/                # CV and resume files
-└── README.md               # Project documentation
+├── cv_extract.txt          # Supporting CV/reference text
+├── assets/                 # Screenshot and visual assets
+├── uploads/                # Resume and CV PDFs
+├── README.md               # Project documentation
+└── .gitignore              # Git ignore file (if present)
 ```
 
-## Run Locally
+## ▶️ Run Locally
 
 1. Open a terminal in the project folder.
 2. Run:
@@ -39,19 +52,21 @@ python app.py
 http://localhost:8000/portfolio.html
 ```
 
-## Files
+## 📁 Key Files
 
-- `portfolio.html` contains the portfolio UI, content, and styling.
-- `app.py` serves the page via a local Python HTTP server.
-- `assets/` contains screenshots and portfolio images.
-- `uploads/` contains downloadable CV/resume documents.
+- `portfolio.html` — main portfolio design, structure, and styling
+- `app.py` — local server that serves the portfolio
+- `index.html` — redirect page for GitHub Pages deployment
+- `assets/` — project visuals and portfolio images
+- `uploads/` — CV and resume files
 
-## Notes
+## 📝 Notes
 
-This repository is intended for personal portfolio use and demonstration of work, skills, and professional experience.
+This repository is intended for personal portfolio use and showcases professional interests, learning, projects, and career direction in a modern digital format.
 
-## GitHub
+## 🌟 Highlights
 
-The project is published on GitHub here:
-
-https://github.com/syedyaserali45/portfolio-website
+- Responsive layout for desktop and mobile browsing
+- Modern visual design with subtle motion and effects
+- Portfolio sections covering work, education, journey, skills, and contact
+- Public deployment using GitHub Pages for easy hosting
