@@ -221,6 +221,205 @@
     .project-link.primary { background: var(--accent); color: #11180e; border-color: var(--accent); }
     .project-link.primary:hover { background: #daf88a; }
 
+    /* Interactive Preview Modal */
+    .preview-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(4, 8, 11, .88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .24s ease, visibility .24s ease;
+    }
+    .preview-modal-backdrop.is-open {
+      opacity: 1;
+      visibility: visible;
+    }
+    .preview-modal {
+      position: relative;
+      width: min(1040px, 96vw);
+      max-height: 92vh;
+      background: var(--bg-elevated);
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 32px 90px rgba(0, 0, 0, .65);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transform: scale(0.95) translateY(12px);
+      transition: transform .26s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .preview-modal-backdrop.is-open .preview-modal {
+      transform: scale(1) translateY(0);
+    }
+    .preview-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--line);
+      background: color-mix(in srgb, var(--bg-card) 92%, transparent);
+    }
+    .preview-modal-title-group h4 {
+      margin: 0;
+      font-size: 1.18rem;
+      letter-spacing: -.02em;
+      color: var(--ink);
+    }
+    .preview-modal-subtitle {
+      font-size: .8rem;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+    .preview-modal-close {
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid var(--line);
+      color: var(--ink);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      cursor: pointer;
+      transition: .2s ease;
+    }
+    .preview-modal-close:hover {
+      background: var(--accent);
+      color: #11180e;
+      border-color: var(--accent);
+      transform: rotate(90deg);
+    }
+    .preview-tabs {
+      display: flex;
+      gap: 8px;
+      padding: 10px 24px;
+      background: color-mix(in srgb, var(--bg) 94%, transparent);
+      border-bottom: 1px solid var(--line);
+      overflow-x: auto;
+      scrollbar-width: thin;
+    }
+    .preview-tab-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 15px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: transparent;
+      color: var(--muted);
+      font-size: .8rem;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: .18s ease;
+    }
+    .preview-tab-btn:hover {
+      color: var(--ink);
+      border-color: var(--line-strong);
+      background: rgba(255, 255, 255, .05);
+    }
+    .preview-tab-btn.active {
+      background: var(--accent);
+      color: #11180e;
+      border-color: var(--accent);
+    }
+    .preview-modal-body {
+      padding: 18px 24px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      background: radial-gradient(circle at 50% 20%, rgba(200, 241, 105, .03), transparent 70%), var(--bg);
+    }
+    .preview-image-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 240px;
+      max-height: 56vh;
+      border-radius: var(--radius-md);
+      background: rgba(0, 0, 0, .3);
+      border: 1px solid var(--line);
+      overflow: hidden;
+      position: relative;
+    }
+    .preview-image-wrapper img {
+      max-width: 100%;
+      max-height: 56vh;
+      object-fit: contain;
+      display: block;
+      border-radius: calc(var(--radius-md) - 2px);
+      transition: opacity .2s ease;
+    }
+    .preview-caption {
+      width: 100%;
+      text-align: left;
+      padding: 10px 16px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+    }
+    .preview-caption-title {
+      font-size: .92rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 2px;
+    }
+    .preview-caption-desc {
+      font-size: .82rem;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+    .preview-modal-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 24px;
+      border-top: 1px solid var(--line);
+      background: color-mix(in srgb, var(--bg-card) 92%, transparent);
+    }
+    .preview-nav-arrows {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .preview-nav-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid var(--line-strong);
+      background: transparent;
+      color: var(--ink);
+      cursor: pointer;
+      font-weight: 700;
+      transition: .2s ease;
+    }
+    .preview-nav-btn:hover {
+      background: var(--accent);
+      color: #11180e;
+      border-color: var(--accent);
+    }
+    .preview-counter {
+      font-size: .78rem;
+      color: var(--muted);
+      padding-left: 6px;
+      font-family: monospace;
+    }
+
     /* Timeline */
     .timeline { position: relative; margin-top: 30px; }
     .timeline::before { content: ""; position: absolute; left: 12px; top: 9px; bottom: 10px; width: 1px; background: var(--line-strong); }
@@ -668,12 +867,12 @@
         </div>
         <div class="grid-3" id="projectGrid">
           <article class="card project-card reveal" data-category="analytics">
-            <div class="project-visual project-image-card"><span class="visual-label">Pipeline view / 01</span><img class="project-cover" src="assets/hr-recruitment-dashboard.png" alt="Recruitment analytics dashboard visual" loading="lazy" /></div>
-            <div class="project-content"><div class="project-title"><h3>HR Recruitment Analytics Dashboard</h3><span class="project-index">01</span></div><p>Organized the hiring pipeline across applications, shortlisting, interviews, selections, and rejections. Excel supported preparation and analysis; Power BI turned the information into a management-friendly view.</p><div class="tag-list"><span class="tag">Microsoft Excel</span><span class="tag">Power BI</span><span class="tag">Recruitment analytics</span></div><div class="project-links"><a class="project-link primary" href="https://github.com/syedyaserali45/HR-Recruitment-Analytics" target="_blank" rel="noreferrer noopener">GitHub</a><a class="project-link" href="https://raw.githubusercontent.com/syedyaserali45/HR-Recruitment-Analytics/main/HR%20Recruitment%20Analytics%20Dashboard.png" target="_blank" rel="noreferrer noopener">View</a></div></div>
+            <div class="project-visual project-image-card" data-preview-gallery="recruitment" style="cursor: pointer;" title="Click to view dashboard preview"><span class="visual-label">Pipeline view / 01</span><img class="project-cover" src="assets/hr-recruitment-dashboard.png" alt="Recruitment analytics dashboard visual" loading="lazy" /></div>
+            <div class="project-content"><div class="project-title"><h3>HR Recruitment Analytics Dashboard</h3><span class="project-index">01</span></div><p>Organized the hiring pipeline across applications, shortlisting, interviews, selections, and rejections. Excel supported preparation and analysis; Power BI turned the information into a management-friendly view.</p><div class="tag-list"><span class="tag">Microsoft Excel</span><span class="tag">Power BI</span><span class="tag">Recruitment analytics</span></div><div class="project-links"><a class="project-link primary" href="https://github.com/syedyaserali45/HR-Recruitment-Analytics" target="_blank" rel="noreferrer noopener">GitHub</a><a class="project-link" href="assets/hr-recruitment-dashboard.png" data-preview-gallery="recruitment" target="_blank" rel="noreferrer noopener">View</a></div></div>
           </article>
           <article class="card project-card reveal" data-category="analytics">
-            <div class="project-visual project-image-card"><span class="visual-label">Trend board / 02</span><img class="project-cover" src="assets/sales-performance-dashboard.png" alt="Sales performance dashboard visual" loading="lazy" /></div>
-            <div class="project-content"><div class="project-title"><h3>Sales Performance Dashboard</h3><span class="project-index">02</span></div><p>Prepared a structured view of business results, analyzed sales and product performance, and used Power BI to surface KPIs and trends more clearly.</p><div class="tag-list"><span class="tag">Microsoft Excel</span><span class="tag">Power BI</span><span class="tag">KPI thinking</span></div><div class="project-links"><a class="project-link primary" href="https://github.com/syedyaserali45/sales-performance-dashboard" target="_blank" rel="noreferrer noopener">GitHub</a><a class="project-link" href="https://raw.githubusercontent.com/syedyaserali45/sales-performance-dashboard/main/sales-performance-dashboard.png" target="_blank" rel="noreferrer noopener">View</a></div></div>
+            <div class="project-visual project-image-card" data-preview-gallery="sales" style="cursor: pointer;" title="Click to view dashboard preview"><span class="visual-label">Trend board / 02</span><img class="project-cover" src="assets/sales-performance-dashboard.png" alt="Sales performance dashboard visual" loading="lazy" /></div>
+            <div class="project-content"><div class="project-title"><h3>Sales Performance Dashboard</h3><span class="project-index">02</span></div><p>Prepared a structured view of business results, analyzed sales and product performance, and used Power BI to surface KPIs and trends more clearly.</p><div class="tag-list"><span class="tag">Microsoft Excel</span><span class="tag">Power BI</span><span class="tag">KPI thinking</span></div><div class="project-links"><a class="project-link primary" href="https://github.com/syedyaserali45/sales-performance-dashboard" target="_blank" rel="noreferrer noopener">GitHub</a><a class="project-link" href="assets/sales-performance-dashboard-view.png" data-preview-gallery="sales" target="_blank" rel="noreferrer noopener">View</a></div></div>
           </article>
           <article class="card project-card reveal" data-category="analytics">
             <div class="project-visual project-image-card"><span class="visual-label">Clean inputs / 03</span><img class="project-cover" src="assets/sql-data-cleaning.png" alt="SQL data cleaning visual" loading="lazy" /></div>
@@ -848,6 +1047,40 @@
   <footer>
     <div class="wrap footer-row"><span>Copyright © 2026 Syed Yasir Ali. All rights reserved.</span><span class="mono">designed for useful decisions</span><a href="#top">Back to top ↑</a></div>
   </footer>
+
+  <!-- Interactive Dashboard Preview Modal -->
+  <div class="preview-modal-backdrop" id="previewModalBackdrop" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="preview-modal" id="previewModal">
+      <div class="preview-modal-header">
+        <div class="preview-modal-title-group">
+          <h4 id="previewModalTitle">Sales Performance Dashboard</h4>
+          <div class="preview-modal-subtitle" id="previewModalSubtitle">Interactive views & analytics breakdown</div>
+        </div>
+        <button class="preview-modal-close" id="previewModalClose" type="button" aria-label="Close dialog">✕</button>
+      </div>
+      <div class="preview-tabs" id="previewTabs"></div>
+      <div class="preview-modal-body">
+        <div class="preview-image-wrapper">
+          <img id="previewModalImage" src="" alt="Dashboard preview" />
+        </div>
+        <div class="preview-caption">
+          <div class="preview-caption-title" id="previewCaptionTitle"></div>
+          <div class="preview-caption-desc" id="previewCaptionDesc"></div>
+        </div>
+      </div>
+      <div class="preview-modal-footer">
+        <div class="preview-nav-arrows">
+          <button class="preview-nav-btn" id="previewPrevBtn" type="button" aria-label="Previous view">←</button>
+          <button class="preview-nav-btn" id="previewNextBtn" type="button" aria-label="Next view">→</button>
+          <span class="preview-counter" id="previewCounter">1 / 3</span>
+        </div>
+        <div style="display:flex;gap:10px;">
+          <a class="project-link primary" id="previewModalOpenTab" href="" target="_blank" rel="noreferrer noopener">Open full image ↗</a>
+          <button class="project-link" id="previewModalCloseBtn" type="button">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script>
     const root = document.documentElement;
@@ -1097,6 +1330,154 @@
       });
     }, { threshold: .08 });
     document.querySelectorAll('.reveal').forEach((el, index) => { el.dataset.stagger = index % 5; observer.observe(el); });
+
+    // Project Dashboard Preview Lightbox / Gallery
+    const previewGalleries = {
+      sales: {
+        title: 'Sales Performance Dashboard',
+        subtitle: 'Data Analytics, MIS & Power BI Visualization',
+        items: [
+          {
+            tab: '📊 Power BI Dashboard',
+            title: 'Executive Sales Overview (Power BI)',
+            desc: 'Executive analytics dashboard tracking $24.8M in total sales, $4.6M profit (18.5% margin), 38.6K orders, monthly sales trends, regional distribution, and top-selling product categories.',
+            src: 'assets/sales-performance-powerbi.jpg'
+          },
+          {
+            tab: '📑 Excel Dashboard',
+            title: 'Sales Performance Dashboard (2023–2024)',
+            desc: 'Excel operational dashboard analyzing $1.2M sales, 32.3% profit margin, channel trends (Online, Retail, Wholesale, Direct), and top 10 products by sales volume.',
+            src: 'assets/sales-performance-excel.png'
+          },
+          {
+            tab: '🗄️ Data Model Architecture',
+            title: 'Relational Star Schema Data Model',
+            desc: 'Dimensional model linking the central Sales fact table with Calendar, Products, Customers, and Regions dimensions to optimize DAX calculations and filtering performance.',
+            src: 'assets/sales-performance-data-model.png'
+          }
+        ]
+      },
+      recruitment: {
+        title: 'HR Recruitment Analytics Dashboard',
+        subtitle: 'Talent Acquisition & Pipeline Management',
+        items: [
+          {
+            tab: '📊 Pipeline Overview',
+            title: 'HR Recruitment Analytics Dashboard',
+            desc: 'Structured management view organizing applicant stages, conversion rates, shortlisting, interviews, and department hiring metrics.',
+            src: 'assets/hr-recruitment-dashboard.png'
+          }
+        ]
+      }
+    };
+
+    const modalBackdrop = document.getElementById('previewModalBackdrop');
+    const modalTitle = document.getElementById('previewModalTitle');
+    const modalSubtitle = document.getElementById('previewModalSubtitle');
+    const modalImage = document.getElementById('previewModalImage');
+    const captionTitle = document.getElementById('previewCaptionTitle');
+    const captionDesc = document.getElementById('previewCaptionDesc');
+    const tabsContainer = document.getElementById('previewTabs');
+    const counterSpan = document.getElementById('previewCounter');
+    const openTabBtn = document.getElementById('previewModalOpenTab');
+    const closeBtn = document.getElementById('previewModalClose');
+    const closeFooterBtn = document.getElementById('previewModalCloseBtn');
+    const prevBtn = document.getElementById('previewPrevBtn');
+    const nextBtn = document.getElementById('previewNextBtn');
+
+    let currentGalleryKey = 'sales';
+    let currentItemIndex = 0;
+
+    function renderModalItem(galleryKey, index) {
+      const gallery = previewGalleries[galleryKey];
+      if (!gallery || !gallery.items[index]) return;
+      currentGalleryKey = galleryKey;
+      currentItemIndex = index;
+      const item = gallery.items[index];
+
+      modalTitle.textContent = gallery.title;
+      modalSubtitle.textContent = gallery.subtitle;
+      modalImage.style.opacity = '0';
+      setTimeout(() => {
+        modalImage.src = item.src;
+        modalImage.alt = item.title;
+        modalImage.style.opacity = '1';
+      }, 80);
+      captionTitle.textContent = item.title;
+      captionDesc.textContent = item.desc;
+      openTabBtn.href = item.src;
+      counterSpan.textContent = `${index + 1} / ${gallery.items.length}`;
+
+      tabsContainer.innerHTML = '';
+      if (gallery.items.length > 1) {
+        tabsContainer.style.display = 'flex';
+        gallery.items.forEach((it, i) => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = `preview-tab-btn ${i === index ? 'active' : ''}`;
+          btn.textContent = it.tab;
+          btn.addEventListener('click', () => renderModalItem(galleryKey, i));
+          tabsContainer.appendChild(btn);
+        });
+      } else {
+        tabsContainer.style.display = 'none';
+      }
+    }
+
+    function openPreviewModal(galleryKey) {
+      if (!previewGalleries[galleryKey]) return;
+      renderModalItem(galleryKey, 0);
+      modalBackdrop.classList.add('is-open');
+      modalBackdrop.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closePreviewModal() {
+      modalBackdrop.classList.remove('is-open');
+      modalBackdrop.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    if (closeBtn) closeBtn.addEventListener('click', closePreviewModal);
+    if (closeFooterBtn) closeFooterBtn.addEventListener('click', closePreviewModal);
+    if (modalBackdrop) {
+      modalBackdrop.addEventListener('click', (e) => {
+        if (e.target === modalBackdrop) closePreviewModal();
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        const gallery = previewGalleries[currentGalleryKey];
+        if (!gallery) return;
+        const nextIndex = (currentItemIndex - 1 + gallery.items.length) % gallery.items.length;
+        renderModalItem(currentGalleryKey, nextIndex);
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        const gallery = previewGalleries[currentGalleryKey];
+        if (!gallery) return;
+        const nextIndex = (currentItemIndex + 1) % gallery.items.length;
+        renderModalItem(currentGalleryKey, nextIndex);
+      });
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (!modalBackdrop || !modalBackdrop.classList.contains('is-open')) return;
+      if (e.key === 'Escape') closePreviewModal();
+      else if (e.key === 'ArrowLeft' && prevBtn) prevBtn.click();
+      else if (e.key === 'ArrowRight' && nextBtn) nextBtn.click();
+    });
+
+    document.querySelectorAll('[data-preview-gallery]').forEach(trigger => {
+      trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        const key = trigger.dataset.previewGallery;
+        openPreviewModal(key);
+      });
+    });
   </script>
 </body>
 </html>
