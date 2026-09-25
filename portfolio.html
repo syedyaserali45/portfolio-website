@@ -875,8 +875,8 @@
             <div class="project-content"><div class="project-title"><h3>Sales Performance Dashboard</h3><span class="project-index">02</span></div><p>Prepared a structured view of business results, analyzed sales and product performance, and used Power BI to surface KPIs and trends more clearly.</p><div class="tag-list"><span class="tag">Microsoft Excel</span><span class="tag">Power BI</span><span class="tag">KPI thinking</span></div><div class="project-links"><a class="project-link primary" href="https://github.com/syedyaserali45/sales-performance-dashboard" target="_blank" rel="noreferrer noopener">GitHub</a><a class="project-link" href="assets/sales-performance-dashboard-view.png" data-preview-gallery="sales" target="_blank" rel="noreferrer noopener">View</a></div></div>
           </article>
           <article class="card project-card reveal" data-category="analytics">
-            <div class="project-visual project-image-card"><span class="visual-label">Clean inputs / 03</span><img class="project-cover" src="assets/sql-data-cleaning.png" alt="SQL data cleaning visual" loading="lazy" /></div>
-            <div class="project-content"><div class="project-title"><h3>SQL Data Cleaning & Analysis</h3><span class="project-index">03</span></div><p>Practiced workflows for duplicate and inconsistent records, missing-data scenarios, filtering, aggregation, sorting, and extracting structured information for analysis.</p><div class="tag-list"><span class="tag">SQL</span><span class="tag">Data cleaning</span><span class="tag">Aggregation</span></div><div class="project-links"><a class="project-link primary" href="https://github.com/syedyaserali45/SQL" target="_blank" rel="noreferrer noopener">GitHub</a><a class="project-link" href="https://raw.githubusercontent.com/syedyaserali45/SQL/main/screenshots/shot1_audit_queries.png" target="_blank" rel="noreferrer noopener">View</a></div></div>
+            <div class="project-visual project-image-card" data-preview-gallery="sql" style="cursor: pointer;" title="Click to view SQL screenshots"><span class="visual-label">Clean inputs / 03</span><img class="project-cover" src="assets/sql-data-cleaning.png" alt="SQL data cleaning visual" loading="lazy" /></div>
+            <div class="project-content"><div class="project-title"><h3>SQL Data Cleaning & Analysis</h3><span class="project-index">03</span></div><p>Practiced workflows for duplicate and inconsistent records, missing-data scenarios, filtering, aggregation, sorting, and extracting structured information for analysis.</p><div class="tag-list"><span class="tag">SQL</span><span class="tag">Data cleaning</span><span class="tag">Aggregation</span></div><div class="project-links"><a class="project-link primary" href="https://github.com/syedyaserali45/SQL" target="_blank" rel="noreferrer noopener">GitHub</a><a class="project-link" href="assets/sql-data-cleaning-view.png" data-preview-gallery="sql" target="_blank" rel="noreferrer noopener">View</a></div></div>
           </article>
           <article class="card project-card reveal" data-category="web">
             <div class="project-visual project-image-card"><span class="visual-label">Interface study / 04</span><img class="project-cover" src="assets/gym-website.png" alt="Gym website interface visual" loading="lazy" /></div>
@@ -1384,6 +1384,30 @@
             title: 'HR Recruitment Analytics Dashboard (Excel)',
             desc: 'Interactive operational Excel dashboard featuring multi-dimensional slicers (Department, Location, Source, Recruiter, Level), candidate outcome breakdown, and executive summary notes.',
             src: 'assets/hr-recruitment-excel-dashboard.png'
+          }
+        ]
+      },
+      sql: {
+        title: 'SQL Data Cleaning & Analysis',
+        subtitle: 'Data Hygiene, Deduplication & Analytical Queries (MySQL 8.0)',
+        items: [
+          {
+            tab: '📋 Data Quality Audit',
+            title: 'Audit Queries & Data Quality Report (MySQL 8.0)',
+            desc: 'Automated data validation report tracking raw customer ingestion, duplicate identification, email validation, and canonical customer table preparation.',
+            src: 'assets/sql-data-quality-audit.png'
+          },
+          {
+            tab: '📈 Business KPIs',
+            title: 'Headline KPIs & Analytical Aggregations (MySQL 8.0)',
+            desc: 'Business intelligence SQL queries calculating net revenue ($3,242.44), monthly revenue trends, top 5 customers by spend, and 88.9% repeat-purchase rate.',
+            src: 'assets/sql-business-analysis.png'
+          },
+          {
+            tab: '⚙️ Pipeline Script',
+            title: 'Deduplication & Transformation Pipeline (.sql)',
+            desc: 'Production SQL script utilizing window functions (ROW_NUMBER() OVER PARTITION BY) for duplicate ranking, missing data imputation (COALESCE), and data normalization.',
+            src: 'assets/sql-cleaning-pipeline.png'
           }
         ]
       }
